@@ -28,3 +28,33 @@ A simple Django web application with user login, logout and a protected home pag
 The project uses the default SQLite database (`db.sqlite3`). User accounts are stored using Django's built-in `User` model. The database file is not included in this repository.
 
 ## Project Structure
+```
+Userproject/
+├── home/            # Main app (views, urls)
+├── templates/       # index.html, login.html
+├── static/          # Static files
+├── Userproject/     # Project settings and urls
+└── manage.py
+```
+
+## Installation
+```
+git clone https://github.com/amee37685-cmyk/django-login-auth.git
+cd django-login-auth
+pip install django
+python manage.py migrate
+python manage.py createsuperuser
+```
+
+## Run the Project
+```
+python manage.py runserver
+```
+Then open `http://127.0.0.1:8000/login` in your browser and sign in with the superuser you created.
+
+## Future Improvements
+- User registration (sign up) page
+- Forgot password / password reset by email
+- "Remember me" functionality
+- Google and Facebook login
+- Unit tests
